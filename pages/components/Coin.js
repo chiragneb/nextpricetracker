@@ -17,7 +17,7 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketCap, mark
             <td data-label="Market Cap Rank">{marketCapRank}</td>
             <td data-label="Market Cap">{marketCap.toLocaleString()}</td>
             <td data-label="Volume">{volume.toLocaleString()}</td>
-            <td data-label="Ath">{Ath.toLocaleString}</td>
+            <td data-label="Ath">{Ath.toLocaleString()}</td>
             </tr>
             </>
     )

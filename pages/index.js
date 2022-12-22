@@ -6,10 +6,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hello World!</title>
+        <title>nextpricetracker</title>
       </Head>
-      <CoinTable />
+
       <h1> Crypto Price tracker! </h1>
+      <CoinTable />
+      
     </>
   )
 }
