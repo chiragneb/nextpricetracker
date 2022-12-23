@@ -29,18 +29,19 @@ const CoinTable = () => {
 
             return (
                 <>
-                  <table className = "coinTable" >
-                  <thead>
+                <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400" >
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                    <th>Coin</th>
-                    <th>Name</th>
-                    <th>Ticker</th>
-                    <th>Price (USD)</th>    
-                    <th>Price Change Percentage</th>
-                    <th>Market Cap Rank</th>
-                    <th>Market Cap (USD)</th>
-                    <th>Volume (USD)</th>
-                    <th>All time High (USD)</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Coin</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Name</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Ticker</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Price (USD)</th>    
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Price Change Percentage</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Market Cap Rank</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Market Cap (USD)</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">Volume (USD)</th>
+                    <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">All time High (USD)</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -60,6 +61,7 @@ const CoinTable = () => {
                     })}
                     </tbody>
                   </table>
+                  </div>
                 </>
               );
             };
