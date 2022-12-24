@@ -39,8 +39,8 @@ const CoinTable = () => {
                     <th>24hr%</th>
                     <th>7d%</th>
                     <th>Rank</th>
-                    <th>Market Cap (USD)</th>
-                    <th>Volume (USD)</th>
+                    <th>Market Cap</th>
+                    <th>Volume 24h</th>
                     <th>All time High (USD)</th>
                     </tr>
                     </thead>
