@@ -11,7 +11,7 @@ const CoinTable = () => {
     useEffect(() => {
         axios
           .get(
-            "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+            "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=1h,24h,7d&sparkline=false"
           )
           .then((response) => {
             setCoins(response.data);
@@ -28,15 +28,17 @@ const CoinTable = () => {
 
             return (
                 <>
-                  <table className="border-separate border border-black-900" >
+                  <table className="border-separate border border-black-900 ..." >
                   <thead>
                   <tr className="bg-gray-200">
                     <th>Coin</th>
                     <th>Name</th>
                     <th>Ticker</th>
                     <th>Price (USD)</th>    
-                    <th>Price Change Percentage</th>
-                    <th>Market Cap Rank</th>
+                    <th>1hr%</th>
+                    <th>24hr%</th>
+                    <th>7d%</th>
+                    <th>Rank</th>
                     <th>Market Cap (USD)</th>
                     <th>Volume (USD)</th>
                     <th>All time High (USD)</th>
@@ -50,7 +52,9 @@ const CoinTable = () => {
                       image = {coin.image}
                       symbol = {coin.symbol}
                       price = {coin.current_price}
-                      priceChange = {coin.price_change_percentage_24h}
+                      OneHr = {coin.price_change_percentage_1h_in_currency}
+                      TwoFourHr={coin.price_change_percentage_24h_in_currency}
+                      SevenDays={coin.price_change_percentage_7d_in_currency}
                       volume = {coin.total_volume}
                       marketCap = {coin.market_cap}
                       marketCapRank = {coin.market_cap_rank}
