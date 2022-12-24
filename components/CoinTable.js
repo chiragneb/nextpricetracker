@@ -1,11 +1,12 @@
 import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import Coin from "./Coin";
+import { coinPassed } from "./CoinSearch";
 
 
 const CoinTable = () => {
     const [coins, setCoins] = useState([]);
-  //  const passedCoinName = useContext(coinPassed);
+    const passedCoinName = useContext(coinPassed);
 
     useEffect(() => {
         axios
@@ -21,8 +22,8 @@ const CoinTable = () => {
       }, []);
 
         const filteredCoins = coins.filter(coin => 
-            coin.name.toLowerCase()//.includes(passedCoinName.toLowerCase()) //|| 
-        //    coin.symbol.toLowerCase().includes(passedCoinName.toLowerCase())
+            coin.name.toLowerCase().includes(passedCoinName.toLowerCase()) || 
+            coin.symbol.toLowerCase().includes(passedCoinName.toLowerCase())
             );
 
             return (
