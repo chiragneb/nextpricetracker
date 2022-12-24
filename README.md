@@ -1,15 +1,15 @@
-# Crypto Price tracker TOP 100 coins 
+# Crypto Price tracker TOP 100 coins 💵
 
-'''Crypto Price Tracker Build with Next.js and Tailwindcss'''
+## Crypto Price Tracker Build with Next.js and Tailwindcss 🖤
 
-Crypto price tracker built with nextJs and Tailwind CSS
+🙏🏻
 
-Also added search function - can be searched using NAME or TICKER. 
+Also added `Search 🔎` function - can be searched using **NAME** or **TICKER**. 
 
 API: [CoinGecko](https://www.coingecko.com/en/api/documentation)
 
-'''Scripts'''
+## Scripts
 
-'''yarn dev'''
-'''yarn start'''
-'''yarn install'''
+1. `yarn dev`
+2. `yarn start`
+3. `yarn install`
