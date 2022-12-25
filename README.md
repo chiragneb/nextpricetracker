@@ -4,7 +4,9 @@
 
 🙏🏻
 
-Also added `Search 🔎` function - can be searched using **NAME** or **TICKER**. 
+Added `Search 🔎` function - can be searched using **NAME** or **TICKER**.
+
+Added three price change % ➡️ `1hr, 24hr and 7days`
 
 API: [CoinGecko](https://www.coingecko.com/en/api/documentation)
 
