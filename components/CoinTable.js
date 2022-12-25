@@ -3,16 +3,16 @@ import axios from "axios";
 import Coin from "./Coin";
 import { coinPassed } from "./CoinSearch";
 
+const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=1h,24h,7d&sparkline=false";
 
 const CoinTable = () => {
     const [coins, setCoins] = useState([]);
     const passedCoinName = useContext(coinPassed);
 
+
     useEffect(() => {
         axios
-          .get(
-            "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=1h,24h,7d&sparkline=false"
-          )
+          .get(url)
           .then((response) => {
             setCoins(response.data);
           })
@@ -42,8 +42,8 @@ const CoinTable = () => {
                     <th>Market Cap</th>
                     <th>Volume 24h</th>
                     <th>ATH ($)</th>
-                    </tr>
-                    </thead>
+                  </tr>
+                  </thead>
                     <tbody>
                     {filteredCoins.map((coin) => {
                       return <Coin 
@@ -67,5 +67,6 @@ const CoinTable = () => {
                 </>
               );
             };
+
 
 export default CoinTable;
