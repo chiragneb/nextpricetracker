@@ -16,7 +16,7 @@ const Coin = ({
 }) => {
     return (
         <>
-        <tr className="bg-gray-200">
+        <tr>
             <td className="text-center"><img src={image} alt="cryptoCoin" className="object-fill h-10 w-10 rounded-full"></img></td>
             <td className="text-center">{name}</td>
             <td className="text-center">{symbol.toUpperCase()}</td>
