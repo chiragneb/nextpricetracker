@@ -28,9 +28,9 @@ const CoinTable = () => {
 
             return (
                 <>
-                  <table className="border-separate border border-black-900 ..." >
+                  <table className="table-fixed border-separate border border-black-900 dark:border-white-900 ..." >
                   <thead>
-                  <tr className="bg-gray-200">
+                  <tr className="border-separate border-black-900 dark:border-white-900">
                     <th>Coin</th>
                     <th>Name</th>
                     <th>Ticker</th>

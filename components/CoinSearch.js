@@ -13,10 +13,10 @@ function CoinSearch() {
 
     return (
         <>
-           <h1 className="mb-2 text-3xl font-extrabold text-black"> Search for a Coin: </h1>
+           <h1 className="mb-2 text-3xl font-extrabold text-black dark:text-white"> Search for a Coin: </h1>
                 <form>
                     <input 
-                    className="mb-6 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="mb-6 shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                     type="text"
                     placeholder="Search"
                     onChange={handleChange}
