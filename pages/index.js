@@ -20,7 +20,7 @@ export default function Home() {
               <CoinSearch />
 
               <footer className="text-center lg:text-left my-8" > 🏗️ by &nbsp;
-              <Link href={{ pathname: "https:chiragneb.vercel.app" }} target="_blank" className="font-bold mb-8 underline">Chirag Neb</Link></footer>
+              <Link href={{ pathname: "https://chiragneb.vercel.app" }} target="_blank" className="font-bold mb-8 underline">Chirag Neb</Link></footer>
               <div className='my-6 text-xs'>™️ 2023</div>
        </div>
     </>
