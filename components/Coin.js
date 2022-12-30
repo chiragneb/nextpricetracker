@@ -2,6 +2,7 @@
 import React from 'react';
 
 const Coin = ({ 
+    marketCapRank, 
     name, 
     image, 
     symbol, 
@@ -11,16 +12,16 @@ const Coin = ({
     TwoFourHr, 
     SevenDays, 
     marketCap, 
-    marketCapRank, 
     Ath
 }) => {
     return (
         <>
         <tr>
-            <td className="text-center"><img src={image} alt="cryptoCoin" className="object-fill h-10 w-10 rounded-full"></img></td>
+            <td className="text-center">{marketCapRank}</td>
+            <td className="text-center"><img src={image} alt="cryptoCoin" className="object-contain h-6 w-5 rounded-full" /></td>
             <td className="text-center">{name}</td>
             <td className="text-center">{symbol.toUpperCase()}</td>
-            <td className="text-center">${price.toLocaleString()}</td>
+            <td className="text-center">{price.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             {
                 (OneHr < 0) ?
                 (<td className= "text-center text-red-600" >{OneHr.toFixed(2)}%</td>) : 
@@ -36,10 +37,10 @@ const Coin = ({
                 (<td className= "text-center text-red-600" >{SevenDays.toFixed(2)}%</td>) : 
                 (<td className= "text-center text-green-600" >+{SevenDays.toFixed(2)}%</td>)
             }
-            <td className="text-center">{marketCapRank}</td>
-            <td className="text-center">{marketCap.toLocaleString()}</td>
-            <td className="text-center">{volume.toLocaleString()}</td>
-            <td className="text-center">${Ath.toLocaleString()}</td>
+            
+            <td className="text-center">{marketCap.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
+            <td className="text-center">{volume.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
+            <td className="text-center">{Ath.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             </tr>
             </>
     )

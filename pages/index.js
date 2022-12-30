@@ -11,7 +11,7 @@ export default function Home() {
         <title>nextpricetracker</title>
       </Head>
        <div className="mb-2 grid h-screen place-items-center">
-           <h1 className="mt-2 mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white underline">
+           <h1 className="mt-2 mb-6 text-4xl capitalize font-extrabold drop-shadow-2xl leading-none md:text-5xl lg:text-6xl dark:text-white">
                           Top-100 Cryptocurrency list </h1>
               <div className='justify-center mb-4'>
               <button className='mr-2 bg-slate-500 text-white font-bold py-2 px-4 border-b-4 border-gray-700' onClick={() => window.location.reload(false)}> RELOAD </button>

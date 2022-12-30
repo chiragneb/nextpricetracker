@@ -28,17 +28,17 @@ const CoinTable = () => {
 
             return (
                 <>
-                  <table className="table-fixed border-separate border border-black-900 dark:border-white-900 ..." >
+                  <table className="table-auto border-separate border border-black-50" >
                   <thead>
-                  <tr className="border-separate border-black-900 dark:border-white-900">
-                    <th>Coin</th>
+                  <tr>
+                    <th>Rank</th>
+                    <th>-</th>
                     <th>Name</th>
                     <th>Ticker</th>
                     <th>Price (USD)</th>    
                     <th>1hr%</th>
                     <th>24hr%</th>
                     <th>7d%</th>
-                    <th>Rank</th>
                     <th>Market Cap</th>
                     <th>Volume 24h</th>
                     <th>ATH ($)</th>
