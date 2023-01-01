@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import { Sparklines , SparklinesLine} from 'react-sparklines';
 
 const Coin = ({ 
     marketCapRank, 
@@ -12,14 +13,15 @@ const Coin = ({
     TwoFourHr, 
     SevenDays, 
     marketCap, 
-    Ath
+    Ath,
+    Spark,
 }) => {
     return (
         <>
         <tr>
             <td className="text-center">{marketCapRank}</td>
             <td className="text-center"><img src={image} alt="cryptoCoin" className="object-contain h-6 w-5 rounded-full" /></td>
-            <td className="text-center">{name}</td>
+            <td className="text-center font-bold">{name}</td>
             <td className="text-center">{symbol.toUpperCase()}</td>
             <td className="text-center">{price.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             {
@@ -41,6 +43,7 @@ const Coin = ({
             <td className="text-center">{marketCap.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             <td className="text-center">{volume.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             <td className="text-center">{Ath.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
+            <td className="text-center">{<Sparklines data={Spark}><SparklinesLine /></Sparklines>}</td>
             </tr>
             </>
     )

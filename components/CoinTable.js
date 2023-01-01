@@ -3,7 +3,7 @@ import axios from "axios";
 import Coin from "./Coin";
 import { coinPassed } from "./CoinSearch";
 
-const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=1h,24h,7d&sparkline=false";
+const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=1h,24h,7d&sparkline=true";
 
 const CoinTable = () => {
     const [coins, setCoins] = useState([]);
@@ -25,6 +25,8 @@ const CoinTable = () => {
             coin.name.toLowerCase().includes(passedCoinName.toLowerCase()) || 
             coin.symbol.toLowerCase().includes(passedCoinName.toLowerCase())
             );
+        
+        
 
             return (
                 <>
@@ -42,6 +44,7 @@ const CoinTable = () => {
                     <th>Market Cap</th>
                     <th>Volume 24h</th>
                     <th>ATH ($)</th>
+                    <th>7D Spark</th>
                   </tr>
                   </thead>
                     <tbody>
@@ -59,6 +62,7 @@ const CoinTable = () => {
                       marketCap = {coin.market_cap}
                       marketCapRank = {coin.market_cap_rank}
                       Ath = {coin.ath}
+                      Spark = {coin.sparkline_in_7d.price}
                       />;
                     })}
                     </tbody>
