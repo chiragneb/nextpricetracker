@@ -21,8 +21,8 @@ const CoinTable = () => {
           });
       }, []);
 
-        const filteredCoins = coins.filter(coin => 
-            coin.name.toLowerCase().includes(passedCoinName.toLowerCase()) || 
+      const filteredCoins = coins.filter(coin => 
+           coin.name.toLowerCase().includes(passedCoinName.toLowerCase()) || 
             coin.symbol.toLowerCase().includes(passedCoinName.toLowerCase())
             );
         
@@ -30,21 +30,21 @@ const CoinTable = () => {
 
             return (
                 <>
-                  <table className="table-auto border-separate border border-black-50" >
+                  <table className="table-auto border border-collapse" >
                   <thead>
                   <tr>
-                    <th>Rank</th>
-                    <th>-</th>
-                    <th>Name</th>
-                    <th>Ticker</th>
-                    <th>Price (USD)</th>    
-                    <th>1hr%</th>
-                    <th>24hr%</th>
-                    <th>7d%</th>
-                    <th>Market Cap</th>
-                    <th>Volume 24h</th>
-                    <th>ATH ($)</th>
-                    <th>7D Spark</th>
+                    <th className="border">Rank</th>
+                    <th className="border">icon</th>
+                    <th className="border">Name</th>
+                    <th className="border">Ticker</th>
+                    <th className="border">Price (USD)</th>    
+                    <th className="border">1hr%</th>
+                    <th className="border">24hr%</th>
+                    <th className="border">7d%</th>
+                    <th className="border">Market Cap</th>
+                    <th className="border">Volume 24h</th>
+                    <th className="border">ATH ($)</th>
+                    <th className="border">7D Spark</th>
                   </tr>
                   </thead>
                     <tbody>
