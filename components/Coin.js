@@ -26,24 +26,24 @@ const Coin = ({
             <td className="text-center border">{price.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             {
                 (OneHr < 0) ?
-                (<td className= "text-center text-red-600 border" >{OneHr.toFixed(2)}%</td>) : 
-                (<td className= "text-center text-green-600 border" >+{OneHr.toFixed(2)}%</td>)
+                (<td className= "text-center text-red-600 border" >{OneHr?.toFixed(2)}%</td>) : 
+                (<td className= "text-center text-green-600 border" >+{OneHr?.toFixed(2)}%</td>)
             }
             {
                 (TwoFourHr < 0) ?
-                (<td className= "text-center text-red-600 border" >{TwoFourHr.toFixed(2)}%</td>) : 
-                (<td className= "text-center text-green-600 border" >+{TwoFourHr.toFixed(2)}%</td>)
+                (<td className= "text-center text-red-600 border" >{TwoFourHr?.toFixed(2)}%</td>) : 
+                (<td className= "text-center text-green-600 border" >+{TwoFourHr?.toFixed(2)}%</td>)
             }
             {
                 (SevenDays < 0) ?
-                (<td className= "text-center text-red-600 border" >{SevenDays.toFixed(2)}%</td>) : 
-                (<td className= "text-center text-green-600 border" >+{SevenDays.toFixed(2)}%</td>)
+                (<td className= "text-center text-red-600 border" >{SevenDays?.toFixed(2)}%</td>) : 
+                (<td className= "text-center text-green-600 border" >+{SevenDays?.toFixed(2)}%</td>)
             }
             
             <td className="text-center border">{marketCap.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             <td className="text-center border">{volume.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             <td className="text-center border">{Ath.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
-            <td className="text-center border">{<Sparklines data={Spark} width={100} height={60}><SparklinesLine /></Sparklines>}</td>
+            <td className="text-center border">{<Sparklines data={Spark} width={80} height={60}><SparklinesLine /></Sparklines>}</td>
             </tr>
             </>
     )
