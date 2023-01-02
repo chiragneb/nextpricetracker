@@ -12,6 +12,8 @@ Added DarkMode using [next-themes](https://github.com/pacocoursey/next-themes)
 
 API: [CoinGecko](https://www.coingecko.com/en/api/documentation)
 
+Added 7d Spakline graphics using [react-sparklines](https://github.com/borisyankov/react-sparklines) library.
+
 ## Scripts
 
 1. `yarn dev`
