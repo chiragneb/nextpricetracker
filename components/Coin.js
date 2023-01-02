@@ -43,7 +43,7 @@ const Coin = ({
             <td className="text-center border">{marketCap.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             <td className="text-center border">{volume.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
             <td className="text-center border">{Ath.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
-            <td className="text-center border">{<Sparklines data={Spark}><SparklinesLine /></Sparklines>}</td>
+            <td className="text-center border">{<Sparklines data={Spark} width={100} height={60}><SparklinesLine /></Sparklines>}</td>
             </tr>
             </>
     )
