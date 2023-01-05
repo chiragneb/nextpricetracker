@@ -3,33 +3,45 @@ import axios from "axios";
 import Coin from "./Coin";
 import { coinPassed } from "./CoinSearch";
 
-const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=1h,24h,7d&sparkline=true";
 
 const CoinTable = () => {
     const [coins, setCoins] = useState([]);
     const passedCoinName = useContext(coinPassed);
-
+    const [page, setPage] = useState(1);
+    
 
     useEffect(() => {
         axios
-          .get(url)
+          .get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${page}&price_change_percentage=1h,24h,7d&sparkline=true`)
           .then((response) => {
+            console.log(response.data);
             setCoins(response.data);
           })
           .catch((error) => {
             alert(error.message);
           });
-      }, []);
+      },  [page]);
 
       const filteredCoins = coins.filter(coin => 
            coin.name.toLowerCase().includes(passedCoinName.toLowerCase()) || 
             coin.symbol.toLowerCase().includes(passedCoinName.toLowerCase())
             );
-        
-        
+
+            const handlePrevPage = () => {
+              console.log(page);
+              if (page > 1) {
+                setPage(page - 1);
+              }
+            };
+          
+            const handleNextPage = () => {
+              console.log(page);
+              setPage(page + 1);
+            };
 
             return (
                 <>
+           
                   <table className="table-auto border border-collapse" >
                   <thead>
                   <tr>
@@ -67,7 +79,11 @@ const CoinTable = () => {
                     })}
                     </tbody>
                   </table>
-             
+                  <div className="mt-4">
+                  <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700" onClick={handlePrevPage}>Prev</button>
+                  <span className="mr-2 ml-2">{page}</span>
+                 <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700" onClick={handleNextPage}>Next</button>
+                   </div>
                 </>
               );
             };
