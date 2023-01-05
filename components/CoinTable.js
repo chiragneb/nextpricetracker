@@ -3,12 +3,10 @@ import axios from "axios";
 import Coin from "./Coin";
 import { coinPassed } from "./CoinSearch";
 
-
 const CoinTable = () => {
     const [coins, setCoins] = useState([]);
     const passedCoinName = useContext(coinPassed);
     const [page, setPage] = useState(1);
-    
 
     useEffect(() => {
         axios
@@ -80,10 +78,10 @@ const CoinTable = () => {
                     </tbody>
                   </table>
                   <div className="mt-4">
-                  <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700" onClick={handlePrevPage}>Prev</button>
-                  <span className="mr-2 ml-2">{page}</span>
-                 <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700" onClick={handleNextPage}>Next</button>
-                   </div>
+                    <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700" onClick={handlePrevPage}>Prev</button>
+                     <span className="mr-2 ml-2">{page}</span>
+                    <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700" onClick={handleNextPage}>Next</button>
+                  </div>
                 </>
               );
             };
