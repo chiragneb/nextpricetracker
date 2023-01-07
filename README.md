@@ -1,4 +1,4 @@
-# Crypto Price tracker TOP 100 coins 💵
+# Crypto Price tracker - tracking prices of 500+ currencies realtime data  💵
 
 ## Crypto Price Tracker Build with Next.js and Tailwindcss 🖤
 
@@ -14,7 +14,7 @@ API: [CoinGecko](https://www.coingecko.com/en/api/documentation)
 
 **Major Update** Added 7d Spakline graphics using [react-sparklines](https://github.com/borisyankov/react-sparklines) library.
 
-**Major Update** Added Pagination  
+**Major Update** Added **PAGINATION**
 
 ## Scripts
 

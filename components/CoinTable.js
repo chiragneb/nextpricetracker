@@ -39,7 +39,6 @@ const CoinTable = () => {
 
             return (
                 <>
-           
                   <table className= "border-separate [border-spacing:0.75rem]">
                   <thead>
                   <tr>
