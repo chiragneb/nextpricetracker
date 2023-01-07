@@ -40,21 +40,21 @@ const CoinTable = () => {
             return (
                 <>
            
-                  <table className="table-auto border border-collapse" >
+                  <table className= "border-separate [border-spacing:0.75rem]">
                   <thead>
                   <tr>
-                    <th className="border">Rank</th>
-                    <th className="border">icon</th>
-                    <th className="border">Name</th>
-                    <th className="border">Ticker</th>
-                    <th className="border">Price (USD)</th>    
-                    <th className="border">1hr%</th>
-                    <th className="border">24hr%</th>
-                    <th className="border">7d%</th>
-                    <th className="border">Market Cap</th>
-                    <th className="border">Volume 24h</th>
-                    <th className="border">ATH ($)</th>
-                    <th className="border">7D Spark</th>
+                    <th>Rank</th>
+                    <th>icon</th>
+                    <th>Name</th>
+                    <th>Ticker</th>
+                    <th>Price (USD)</th>    
+                    <th>1hr%</th>
+                    <th>24hr%</th>
+                    <th>7d%</th>
+                    <th>Market Cap</th>
+                    <th>Volume 24h</th>
+                    <th>ATH ($)</th>
+                    <th>7D Spark</th>
                   </tr>
                   </thead>
                     <tbody>
