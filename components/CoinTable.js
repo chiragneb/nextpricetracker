@@ -53,7 +53,7 @@ const CoinTable = () => {
                     <th>Market Cap</th>
                     <th>Volume 24h</th>
                     <th>ATH ($)</th>
-                    <th>7D Spark</th>
+                    <th>7D Price Graph</th>
                   </tr>
                   </thead>
                     <tbody>

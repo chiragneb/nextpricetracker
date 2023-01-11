@@ -20,7 +20,7 @@ const Coin = ({
         <>
         <tr>
             <td className="text-center ">{marketCapRank}</td>
-            <td><img src={image} alt="cryptoCoin" className="object-center object-contain h-7 h-5 ml-2 rounded-full" /></td>
+            <td><img src={image} alt="cryptoCoin" className="object-center object-contain h-10 w-10 ml-2 rounded-full" /></td>
             <td className="text-center font-bold">{name}</td>
             <td className="text-center">{symbol.toUpperCase()}</td>
             <td className="text-center">{price.toLocaleString("en-US", {style:"currency", currency:"USD", maximumFractionDigits: 7})}</td>
@@ -43,7 +43,7 @@ const Coin = ({
             <td className="text-center">{marketCap.toLocaleString("en-US", {style:"currency", currency:"USD", minimumFractionDigits: 0})}</td>
             <td className="text-center">{volume.toLocaleString("en-US", {style:"currency", currency:"USD", minimumFractionDigits: 0})}</td>
             <td className="text-center">{Ath.toLocaleString("en-US", {style:"currency", currency:"USD", minimumFractionDigits: 0})}</td>
-            <td className="text-center">{<Sparklines data={Spark} width={100} height={70}><SparklinesLine /></Sparklines>}</td>
+            <td className='object-center object-contain'>{<Sparklines data={Spark} width={100} height={50}><SparklinesLine /></Sparklines>}</td>
             </tr>
             </>
     )
