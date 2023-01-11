@@ -42,18 +42,18 @@ const CoinTable = () => {
                   <table className= "border-separate [border-spacing:0.75rem]">
                   <thead>
                   <tr>
-                    <th>Rank</th>
-                    <th>icon</th>
-                    <th>Name</th>
-                    <th>Ticker</th>
-                    <th>Price (USD)</th>    
-                    <th>1hr%</th>
-                    <th>24hr%</th>
-                    <th>7d%</th>
-                    <th>Market Cap</th>
-                    <th>Volume 24h</th>
-                    <th>ATH ($)</th>
-                    <th>7D Price Graph</th>
+                    <th className="underline">Rank</th>
+                    <th className="underline">Icon</th>
+                    <th className="underline">Name</th>
+                    <th className="underline">Ticker</th>
+                    <th className="underline">Price (USD)</th>    
+                    <th className="underline">1hr%</th>
+                    <th className="underline">24hr%</th>
+                    <th className="underline">7d%</th>
+                    <th className="underline">Market Cap</th>
+                    <th className="underline">Volume 24h</th>
+                    <th className="underline">ATH ($)</th>
+                    <th className="underline">7D Price Graph</th>
                   </tr>
                   </thead>
                     <tbody>

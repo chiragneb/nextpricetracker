@@ -23,7 +23,7 @@ const Coin = ({
             <td><img src={image} alt="cryptoCoin" className="object-center object-contain h-10 w-10 ml-2 rounded-full" /></td>
             <td className="text-center font-bold">{name}</td>
             <td className="text-center">{symbol.toUpperCase()}</td>
-            <td className="text-center italic font-bold">{price.toLocaleString("en-US", {style:"currency", currency:"USD", maximumFractionDigits: 7})}</td>
+            <td className="text-center font-bold">{price.toLocaleString("en-US", {style:"currency", currency:"USD", maximumFractionDigits: 7})}</td>
             {
                 (OneHr < 0) ?
                 (<td className= "text-center text-red-600" >{OneHr?.toFixed(2)}%</td>) : 

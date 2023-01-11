@@ -21,7 +21,7 @@ export default function Home() {
 
               <footer className="text-center lg:text-left my-8" > 🏗️ by &nbsp;
               <Link href={{ pathname: "https://chiragneb.vercel.app" }} target="_blank" className="font-bold mb-8 underline">Chirag Neb</Link></footer>
-              <div className='my-2 text-xs'>©{new Date().getFullYear()}</div>
+              <div className='mt-2 mb-4 text-xs'>© {new Date().getFullYear()}</div>
        </div>
     </>
   )
