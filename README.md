@@ -16,6 +16,8 @@ API: [CoinGecko](https://www.coingecko.com/en/api/documentation)
 
 **Major Update** Added **PAGINATION**
 
+**UPDATE** added Dynamic Routing - each Table row on Click re-directs to a custom Coin-page at `/ticker/(coin)` - a small page with some more data appears!
+
 ## Scripts
 
 1. `yarn dev`

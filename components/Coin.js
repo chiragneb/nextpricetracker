@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+
 import { Sparklines , SparklinesLine} from 'react-sparklines';
+import { useRouter } from 'next/router';
 
 const Coin = ({ 
     marketCapRank, 
@@ -15,10 +16,14 @@ const Coin = ({
     marketCap, 
     Ath,
     Spark,
-}) => {
+    id, 
+
+}) => { 
+    const router = useRouter()
+
     return (
         <>
-        <tr>
+        <tr key={id} onClick={() => router.push(`/ticker/${id}`)}>
             <td className="text-center ">{marketCapRank}</td>
             <td><img src={image} alt="cryptoCoin" className="object-center object-contain h-10 w-10 ml-2 rounded-full" /></td>
             <td className="text-center font-bold">{name}</td>
@@ -50,3 +55,4 @@ const Coin = ({
 }
 
 export default Coin;
+

@@ -60,6 +60,7 @@ const CoinTable = () => {
                     {filteredCoins.map((coin) => {
                       return <Coin 
                       key = {coin.id} 
+                      id = {coin.id}
                       name = {coin.name} 
                       image = {coin.image}
                       symbol = {coin.symbol}
