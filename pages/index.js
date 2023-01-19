@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>nextpricetracker</title>
       </Head>
-       <div className="mb-2 grid h-screen place-items-center">
+       <div className="mb-8 grid h-screen place-items-center">
            <h1 className="mt-2 mb-6 text-4xl capitalize font-extrabold drop-shadow-2xl leading-none md:text-5xl lg:text-6xl dark:text-white">
                           Top Cryptocurrency list </h1>
               <div className='justify-center mb-4'>
@@ -21,7 +21,7 @@ export default function Home() {
 
               <footer className="text-center lg:text-left my-8" > 🏗️ by &nbsp;
               <Link href={{ pathname: "https://chiragneb.vercel.app" }} target="_blank" className="font-bold mb-8 underline">Chirag Neb</Link></footer>
-              <div className='mt-2 mb-4 text-xs'>© {new Date().getFullYear()}</div>
+              <div className='mt-2 mb-4 text-xs'>© {new Date().getFullYear()} powered by<Link href={{ pathname: "https://www.coingecko.com/en/api/documentation" }} target="_blank" className="font-bold mb-8 underline"> CoinGeckoAPI</Link></div>
        </div>
     </>
   )
